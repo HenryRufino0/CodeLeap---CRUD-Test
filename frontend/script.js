@@ -1,28 +1,28 @@
 const apiUrl = "http://127.0.0.1:8000/careers/";
 
-// ELEMENTOS
+
 const usernameInput = document.getElementById("username");
 const titleInput = document.getElementById("title");
 const contentInput = document.getElementById("content");
 const createBtn = document.getElementById("createBtn");
 
-// CARREGA USERNAME SALVO
+
 const savedUser = localStorage.getItem("codeleap_user") || "";
 usernameInput.value = savedUser;
 
-// ATUALIZA ESTADO DO BOTÃO
+
 function updateButtonState() {
   const filled = usernameInput.value.trim() && titleInput.value.trim() && contentInput.value.trim();
   createBtn.disabled = !filled;
   createBtn.style.opacity = filled ? "1" : "0.5";
 }
 
-// EVENTOS DE INPUT
+
 usernameInput.addEventListener("input", updateButtonState);
 titleInput.addEventListener("input", updateButtonState);
 contentInput.addEventListener("input", updateButtonState);
 
-// SUBMISSÃO DO FORMULÁRIO
+
 document.getElementById("postForm").addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -47,7 +47,6 @@ document.getElementById("postForm").addEventListener("submit", async (e) => {
   loadPosts();
 });
 
-// FUNÇÃO PARA CARREGAR POSTS
 async function loadPosts() {
   const res = await fetch(apiUrl);
   const data = await res.json();
@@ -90,7 +89,7 @@ async function loadPosts() {
   });
 }
 
-// FUNÇÃO DELETAR POST
+
 function confirmDelete(id) {
   const ok = confirm("Tem certeza que deseja deletar este post?");
   if (!ok) return;
@@ -100,7 +99,7 @@ function confirmDelete(id) {
   }).then(() => loadPosts());
 }
 
-// EDIÇÃO DE POST
+
 let currentEditId = null;
 
 function editPost(id, title, content) {
@@ -131,7 +130,7 @@ async function submitEdit() {
   loadPosts();
 }
 
-// INICIALIZAÇÃO
+
 updateButtonState();
 loadPosts();
 
