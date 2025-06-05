@@ -9,7 +9,7 @@ body {
   font-size: 14px;
 }
 
-/* Header azul fixo */
+
 .header {
   background-color: #7695EC;
   color: white;
@@ -18,14 +18,13 @@ body {
   padding: 20px;
 }
 
-/* Container principal centralizado */
+
 .main-container {
   max-width: 700px;
   margin: 30px auto;
   background-color: transparent;
 }
 
-/* Formulário */
 form {
   background-color: white;
   padding: 24px;
@@ -78,14 +77,13 @@ form button:hover:enabled {
   transform: scale(1.03);
 }
 
-/* Lista de posts */
 #postsContainer {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-/* Card do post */
+
 .post {
   background-color: white;
   border: 1px solid #ccc;
@@ -93,7 +91,7 @@ form button:hover:enabled {
   overflow: hidden;
 }
 
-/* Barra azul com título e ações */
+
 .post-header-bar {
   background-color: #7695EC;
   color: white;
@@ -104,7 +102,7 @@ form button:hover:enabled {
   align-items: center;
 }
 
-/* Corpo do post */
+
 .post-content {
   padding: 16px;
 }
@@ -114,13 +112,13 @@ form button:hover:enabled {
   color: #333;
 }
 
-/* Metadados do post */
+
 .post-content .meta {
   color: #999;
   font-size: 12px;
 }
 
-/* Ações (editar/deletar) */
+
 .post-actions button {
   background: none;
   border: none;
@@ -131,7 +129,7 @@ form button:hover:enabled {
   padding: 0;
 }
 
-/* Modal de edição */
+
 .modal {
   position: fixed;
   top: 0;
@@ -170,7 +168,7 @@ form button:hover:enabled {
   gap: 10px;
 }
 
-/* Responsividade */
+
 @media (max-width: 600px) {
   .main-container,
   form,
@@ -216,7 +214,6 @@ form button:hover:enabled {
 }
 
 
-/* Modal de exclusão */
 .delete-modal-content {
   background-color: white;
   padding: 20px;
